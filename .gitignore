@@ -1,0 +1,34 @@
+
+# Dependencies
+node_modules/
+
+# Build output
+.next/
+dist/
+build/
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+
+# Testing
+coverage/
+
+# Local databases
+*.sqlite
+*.db
+
+# Operating system
+.DS_Store
+Thumbs.db
+
+# Editor settings
+.vscode/
+.idea/
