@@ -56,3 +56,7 @@ Planning and initial setup.
 ## Getting Started
 
 Setup instructions will be added as development progresses.
+
+## Feature Development
+
+Activity management is planned for the first development phase.
