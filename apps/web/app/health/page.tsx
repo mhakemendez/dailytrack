@@ -1,3 +1,4 @@
+import { Suspense } from 'react';
 
 type HealthResponse = {
   status: string;
@@ -20,18 +21,24 @@ async function getHealth(): Promise<HealthResponse | null> {
   }
 }
 
-export default async function HealthPage() {
+async function HealthStatus() {
   const health = await getHealth();
 
   return (
-    <main className="p-8">
-      <h1 className="text-2xl font-bold">
-        System Health
-      </h1>
+    <pre className="mt-4 rounded-lg bg-gray-100 p-4 text-black">
+      {JSON.stringify(health ?? { status: 'error' }, null, 2)}
+    </pre>
+  );
+}
 
-      <pre className="mt-4 rounded-lg bg-gray-100 p-4 text-black">
-        {JSON.stringify(health ?? { status: 'error' }, null, 2)}
-      </pre>
+export default function HealthPage() {
+  return (
+    <main className="p-8">
+      <h1 className="text-2xl font-bold">System Health</h1>
+
+      <Suspense fallback={<p className="mt-4">Checking system health...</p>}>
+        <HealthStatus />
+      </Suspense>
     </main>
   );
 }
