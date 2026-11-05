@@ -1,62 +1,58 @@
 
-# DailyTrack
+# AI Development Team
 
-A simple daily activity tracker that helps users organize their schedules, receive reminders, and monitor daily progress.
+A small AI-powered development team for building full-stack web applications.
 
-## Project Goals
+## Team
 
-- Create, edit, and delete activities.
-- Set schedules for daily activities.
-- Receive in-app reminders when activities are due.
-- Mark activities as completed.
-- Track daily progress.
+- Project Manager: ChatGPT
+- Full-Stack Developer: OpenCode
+- QA Engineer: OpenCode
 
 ## Technology Stack
 
-### Frontend
 - Next.js
-- TypeScript
-- Tailwind CSS
-
-### Backend
 - NestJS
-- REST API
-- Prisma ORM
+- TypeScript
 - PostgreSQL
-
-### Testing
-- Jest
-- Supertest
-- Playwright
-
-### DevOps
-- Git
-- GitHub
-- GitHub Actions
-- Docker
+- Prisma
+- npm Workspaces
 
 ## Project Structure
 
 ```text
-dailytrack/
+ai-development-team/
+├── .opencode/
+│   └── agents/
+│       ├── fullstack.md
+│       └── qa.md
 ├── apps/
 │   ├── web/
 │   └── api/
-├── .github/
-│   └── workflows/
-├── docker-compose.yml
-├── .gitignore
-└── README.md
+├── docs/
+│   ├── project.md
+│   └── tasks.md
+├── AGENTS.md
+├── README.md
+└── package.json
 ```
-
-## Project Status
-
-Planning and initial setup.
 
 ## Getting Started
 
-Setup instructions will be added as development progresses.
+Install dependencies:
 
-## Feature Development
+```bash
+npm install
+```
 
-Activity management is planned for the first development phase.
+Start frontend:
+
+```bash
+npm run dev:web
+```
+
+Start backend:
+
+```bash
+npm run dev:api
+```
